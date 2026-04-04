@@ -19,6 +19,15 @@ body {
 }
 
 /* NAV BAR */
+.nav {
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px);         
+    -webkit-backdrop-filter: blur(10px);  
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
+    position: sticky;                     
+    top: 0;
+    z-index: 1000;
+}
 .navbar{
     display: flex;
     align-items: center;
@@ -29,10 +38,17 @@ body {
 
 .nav-icons{
     display: flex;
+    align-items: center;
     gap: 15px;
     font-size: 20px;
     color: #D31C8D;
     cursor: pointer;
+}
+
+.nav-icons img {
+    height: 24px;           
+    width: auto;
+    display: block;
 }
 
 .nav-icons i:hover{
@@ -57,6 +73,7 @@ body {
 /* TEXT STYLES */
 h1 { font-family: 'Times New Roman', serif; color: #D31C8D; font-size: 3rem; }
 p { color: #f15e94; font-style: italic; font-size: 1.2rem; }
+
 /* SEARCH BAR */
 .searchbar{
     display: flex;
@@ -65,14 +82,14 @@ p { color: #f15e94; font-style: italic; font-size: 1.2rem; }
 
 
 /* TEXT STYLES */
-h1, h2, h3{
+h1, h2, h3, h4{
     font-family:'Times New Roman', Times, serif;
     color: #D31C8D;
 }
 
 p{
     color: #f15e94;
-    font-style: italic;
+    font-style: normal;
     font-weight: 500;
 }
 
