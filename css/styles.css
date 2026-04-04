@@ -20,7 +20,7 @@ body {
 
 /* NAV BAR */
 .navbar {
-    background: rgba(255, 255, 255, 0.2); 
+    background: rgba(255, 255, 255, 0.345); 
     backdrop-filter: blur(10px);         
     -webkit-backdrop-filter: blur(10px);  
     border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
@@ -131,3 +131,150 @@ a:hover{
 .user-menu:hover .dropdown{
     display: flex;
 }
+
+/* MAIN BACKGROUND */
+body {
+    background-image: url("../Images/TropiGlow Web BG.jpeg");
+    background-size: cover;
+    background-attachment: fixed; 
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* THE GLASS NAVIGATION BAR */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: rgba(255, 255, 255, 0.4); 
+    backdrop-filter: blur(12px);         
+    -webkit-backdrop-filter: blur(12px);  
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links { display: flex; gap: 30px; }
+.nav-links a { 
+    text-decoration: none; 
+    color: #D31C8D; 
+    font-weight: bold; 
+    transition: 0.3s;
+}
+.nav-links a.active { border-bottom: 2px solid #D31C8D; }
+
+/* NAV ICONS & USER MENU */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 22px;
+    color: #D31C8D;
+}
+
+.user-menu { position: relative; display: flex; align-items: center; cursor: pointer; }
+
+.dropdown {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    min-width: 140px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    z-index: 1001;
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: #D31C8D;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.user-menu:hover .dropdown { display: flex; }
+
+/* PRODUCT GRID */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 products per row */
+    gap: 30px;
+}
+
+/* RESPONSIVE GRID */
+@media (max-width: 992px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .product-grid { grid-template-columns: 1fr; } }
+
+/* PRODUCT CARD */
+.product-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.product-image img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.product-info { padding: 15px; }
+
+.product-info h3 {
+    font-family: 'Times New Roman', serif;
+    color: #D31C8D;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.description {
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #f15e94;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+/* SHOP BUTTON */
+.btn-shop {
+    background: #D31C8D;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.btn-shop:hover {
+    background: #f15e94;
+    box-shadow: 0 4px 15px rgba(211, 28, 141, 0.3);
+}
+
+/* TEXT STYLES */
+h1 { font-family: 'Times New Roman', serif; color: #D31C8D; font-size: 3rem; }
+p { color: #f15e94; font-size: 1.2rem; }
