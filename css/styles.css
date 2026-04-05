@@ -1,3 +1,4 @@
+/* MAIN BACKGROUND */
 body {
     background-image: url("../Images/TropiGlow Web BG.jpeg");
     background-size: cover;
@@ -73,7 +74,6 @@ p { color: #f15e94; font-style: italic; font-size: 1.2rem; }
     gap: 5px;
 }
 
-
 h1, h2, h3, h4{
     font-family:'Times New Roman', Times, serif;
     color: #D31C8D;
@@ -93,7 +93,6 @@ a:hover{
     position: relative;
 }
 
-/* DROPDOWN BOX */
 .dropdown{
     position: absolute;
     top: 30px;
@@ -189,7 +188,7 @@ body {
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); 
     gap: 30px;
 }
 
@@ -265,10 +264,22 @@ p { color: #f15e94; font-size: 1.2rem; }
     --botanical-green: #A3B18A;
     --soft-sand: #F6F4F1;
 }
+body {
+    background-image: url("../Images/TropiGlow Web BG.jpeg");
+    background-size: cover;
+    background-attachment: fixed; 
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', serif; 
+}
 
-body { font-family: sans-serif; background-color: var(--soft-sand); }
-
-.quiz-container { max-width: 500px; margin: 50px auto; background: white; padding: 40px; border-radius: 20px; }
+.quiz-container { 
+    max-width: 500px;
+    margin: 50px auto; 
+    background: white; 
+    padding: 40px; 
+    border-radius: 20px; 
+}
 
 #progress-bar { 
     height: 6px; 
