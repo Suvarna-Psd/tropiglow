@@ -14,7 +14,6 @@ const questions = [
 ];
 
 let currentStep = 0;
-
 function loadQuestion() {
     const qText = document.getElementById('question-text');
     const qOptions = document.getElementById('options-list');
