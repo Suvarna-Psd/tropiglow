@@ -6,110 +6,396 @@ body {
     padding: 0;
 }
 
+.hdrstyle {
+    background-image: url("../Images/Home Page BG.jpeg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px; 
+    display: block; 
+    overflow: hidden;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.345); 
+    backdrop-filter: blur(10px);         
+    -webkit-backdrop-filter: blur(10px);  
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
+    position: sticky;                     
+    top: 0;
+    z-index: 1000;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    gap: 20px;
+}
+
+.nav-icons{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 20px;
+    color: #D31C8D;
+    cursor: pointer;
+}
+
+.nav-icons img {
+    height: 24px;           
+    width: auto;
+    display: block;
+}
+
+.nav-icons i:hover{
+    color: #f15e94;
+}
+
+.hero {
+    padding: 80px 40px; 
+    text-align: center; 
+}
+
 .logo img { height: 60px; }
 .nav-links { display: flex; gap: 30px; }
 .nav-links a { 
     text-decoration: none; 
     color: #D31C8D; 
     font-weight: bold; 
+        font-family: 'Times New Roman', Times, serif;
 }
 
-.content-container {
-    background-color: rgba(255, 255, 255, 0.85); 
-    padding: 40px;
-    margin: 30px auto;
-    max-width: 900px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
+h1 { font-family: 'Times New Roman', serif; color: #D31C8D; font-size: 3rem; }
+p { color: #f15e94; font-style: italic; font-size: 1.2rem; }
 
-h1, h2 {
-    color: #D31081; 
-    margin-bottom: 20px;
-}
-
-p {
-    line-height: 1.6;
-    color: #444; 
-    font-size: 1.1rem;
-}
-
-.content-container {
-    background-color: rgba(255, 255, 255, 0.9); 
-    padding: 40px;
-    margin: 40px auto;
-    max-width: 900px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-}
-
-.team-container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.section-title {
-    color: #D31081;
-    margin-bottom: 40px;
-    font-size: 2.2rem;
-}
-
-.team-grid {
+.searchbar{
     display: flex;
-    justify-content: center;
+    gap: 5px;
+}
+
+h1, h2, h3, h4{
+    font-family:'Times New Roman', Times, serif;
+    color: #D31C8D;
+}
+
+p{
+    color: #f15e94;
+    font-style: normal;
+    font-weight: 500;
+}
+
+a:hover{
+    color: #D31C8D;
+}
+
+.user-menu{
+    position: relative;
+}
+
+.dropdown{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    min-width: 120px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.dropdown a{
+    text-decoration: none;
+    color: #D31C8D;
+    padding: 8px;
+    display: block;
+}
+
+.dropdown a:hover{
+    background-color: #fce4ec;
+}
+
+.user-menu:hover .dropdown{
+    display: flex;
+}
+
+body {
+    background-image: url("../Images/TropiGlow Web BG.jpeg");
+    background-size: cover;
+    background-attachment: fixed; 
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: rgba(255, 255, 255, 0.4); 
+    backdrop-filter: blur(12px);         
+    -webkit-backdrop-filter: blur(12px);  
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links { display: flex; gap: 30px; }
+.nav-links a { 
+    text-decoration: none; 
+    color: #D31C8D; 
+    font-weight: bold; 
+    transition: 0.3s;
+}
+.nav-links a.active { border-bottom: 2px solid #D31C8D; }
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 22px;
+    color: #D31C8D;
+}
+
+.user-menu { position: relative; display: flex; align-items: center; cursor: pointer; }
+
+.dropdown {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    min-width: 140px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    z-index: 1001;
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: #D31C8D;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.user-menu:hover .dropdown { display: flex; }
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
     gap: 30px;
-    flex-wrap: wrap; 
 }
 
-.team-card {
-    background: #fff;
-    padding: 25px;
+@media (max-width: 992px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .product-grid { grid-template-columns: 1fr; } }
+
+.product-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
     border-radius: 20px;
-    width: 280px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    transition: all 0.3s ease; 
-}
-
-.team-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(211, 16, 129, 0.2);
-}
-
-.image-wrapper {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto 20px;
     overflow: hidden;
-    border-radius: 50%; 
-    border: 4px solid #fce4ec;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding-bottom: 20px;
 }
 
-.team-card img {
+.product-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.product-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; 
+    height: 280px;
+    object-fit: cover;
 }
 
-.team-card h3 {
-    color: #333;
+.product-info { padding: 15px; }
+
+.product-info h3 {
+    font-family: 'Times New Roman', serif;
+    color: #D31C8D;
+    font-size: 1.4rem;
     margin-bottom: 5px;
 }
 
-.role {
-    color: #D31081;
-    font-weight: bold;
+.description {
+    color: #666;
     font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #f15e94;
+    font-weight: 700;
+    font-size: 1.2rem;
     margin-bottom: 15px;
 }
 
-.bio {
-    font-size: 0.95rem;
-    color: #666;
-    line-height: 1.4;
+.btn-shop {
+    background: #D31C8D;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.btn-shop:hover {
+    background: #f15e94;
+    box-shadow: 0 4px 15px rgba(211, 28, 141, 0.3);
+}
+
+h1 { font-family: 'Times New Roman', serif; color: #D31C8D; font-size: 3rem; }
+p { color: #f15e94; font-size: 1.2rem; }
+
+:root {
+    --botanical-green: #A3B18A;
+    --soft-sand: #F6F4F1;
+}
+body {
+    background-image: url("../Images/TropiGlow Web BG.jpeg");
+    background-size: cover;
+    background-attachment: fixed; 
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', serif; 
+}
+
+.quiz-container { 
+    max-width: 500px;
+    margin: 50px auto; 
+    background: white; 
+    padding: 40px; 
+    border-radius: 20px; 
+}
+
+#progress-bar { 
+    height: 6px; 
+    background: #D31C8D;
+    width: 0%;      
+    border-radius: 10px;
+    transition: width 0.4s ease; 
+}
+
+.results-section {
+    display: none;
+}
+
+#quiz-ui, #results-ui {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: 40px auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.option-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background-color: white;
+    border: 2px solid #E05297; 
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.option-btn:hover {
+    background-color: #E05297;
+    color: white;
+}
+
+
+:root {
+    --tropical-green: #2d5a27;
+    --soft-hibiscus: #f8ad9d;
+    --glass-white: rgba(255, 255, 255, 0.7);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    color: #333;
+}
+
+h1, h2, .card-title {
+    font-family: 'Playfair Display', serif;
+}
+
+.hero-section {
+    padding: 120px 0;
+    background: url("../Images/TropiGlow\ Web\ BG.jpeg") center/cover no-repeat;
+    color: white;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.35); 
+}
+
+.hero-section h1 {
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.glass-card {
+    background: var(--glass-white);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.btn-tropi {
+    background-color: var(--tropical-green);
+    color: white;
+    border-radius: 25px;
+    padding: 8px 22px;
+    border: none;
+    font-weight: 600;
+}
+
+.btn-tropi:hover {
+    background-color: #1e3d1a;
+    color: white;
+}
+
+.badge-botanical {
+    background-color: var(--soft-hibiscus);
+    color: #5d2e2e;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+.footer-text {
+    color: #888;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
 }
