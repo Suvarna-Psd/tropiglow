@@ -1,4 +1,3 @@
-/* MAIN BACKGROUND */
 body {
     background-image: url("../Images/TropiGlow Web BG.jpeg");
     background-size: cover;
@@ -7,7 +6,6 @@ body {
     padding: 0;
 }
 
-/* HEADER IMAGE */
 .hdrstyle {
     background-image: url("../Images/Home Page BG.jpeg");
     background-size: cover;
@@ -18,7 +16,6 @@ body {
     overflow: hidden;
 }
 
-/* NAV BAR */
 .navbar {
     background: rgba(255, 255, 255, 0.345); 
     backdrop-filter: blur(10px);         
@@ -55,13 +52,11 @@ body {
     color: #f15e94;
 }
 
-/* WELCOME TEXT  */
 .hero {
     padding: 80px 40px; 
     text-align: center; 
 }
 
-/* LOGO & LINKS */
 .logo img { height: 60px; }
 .nav-links { display: flex; gap: 30px; }
 .nav-links a { 
@@ -70,18 +65,15 @@ body {
     font-weight: bold; 
 }
 
-/* TEXT STYLES */
 h1 { font-family: 'Times New Roman', serif; color: #D31C8D; font-size: 3rem; }
 p { color: #f15e94; font-style: italic; font-size: 1.2rem; }
 
-/* SEARCH BAR */
 .searchbar{
     display: flex;
     gap: 5px;
 }
 
 
-/* TEXT STYLES */
 h1, h2, h3, h4{
     font-family:'Times New Roman', Times, serif;
     color: #D31C8D;
@@ -93,12 +85,10 @@ p{
     font-weight: 500;
 }
 
-/* HOVER EFFECT */
 a:hover{
     color: #D31C8D;
 }
 
-/* USER MENU */
 .user-menu{
     position: relative;
 }
@@ -132,7 +122,6 @@ a:hover{
     display: flex;
 }
 
-/* MAIN BACKGROUND */
 body {
     background-image: url("../Images/TropiGlow Web BG.jpeg");
     background-size: cover;
@@ -142,7 +131,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* THE GLASS NAVIGATION BAR */
 .navbar {
     display: flex;
     align-items: center;
@@ -166,7 +154,6 @@ body {
 }
 .nav-links a.active { border-bottom: 2px solid #D31C8D; }
 
-/* NAV ICONS & USER MENU */
 .nav-icons {
     display: flex;
     align-items: center;
@@ -200,18 +187,15 @@ body {
 
 .user-menu:hover .dropdown { display: flex; }
 
-/* PRODUCT GRID */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 products per row */
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
-/* RESPONSIVE GRID */
 @media (max-width: 992px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .product-grid { grid-template-columns: 1fr; } }
 
-/* PRODUCT CARD */
 .product-card {
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(8px);
@@ -257,7 +241,6 @@ body {
     margin-bottom: 15px;
 }
 
-/* SHOP BUTTON */
 .btn-shop {
     background: #D31C8D;
     color: white;
@@ -275,7 +258,6 @@ body {
     box-shadow: 0 4px 15px rgba(211, 28, 141, 0.3);
 }
 
-/* TEXT STYLES */
 h1 { font-family: 'Times New Roman', serif; color: #D31C8D; font-size: 3rem; }
 p { color: #f15e94; font-size: 1.2rem; }
 
@@ -290,17 +272,16 @@ body { font-family: sans-serif; background-color: var(--soft-sand); }
 
 #progress-bar { 
     height: 6px; 
-    background: #D31C8D; /* Changed from botanical green to TropiGlow Pink */
-    width: 0%;          /* Start at 0% */
+    background: #D31C8D;
+    width: 0%;      
     border-radius: 10px;
-    transition: width 0.4s ease; /* This makes the bar "slide" instead of jumping */
+    transition: width 0.4s ease; 
 }
-/* This hides the results section until the quiz is finished */
+
 .results-section {
     display: none;
 }
 
-/* This adds a white background to your quiz so you can see it over the flowers */
 #quiz-ui, #results-ui {
     background: white;
     padding: 30px;
@@ -310,15 +291,13 @@ body { font-family: sans-serif; background-color: var(--soft-sand); }
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* This styles the buttons the JavaScript will create */
 .option-btn {
     display: block;
     width: 100%;
     padding: 12px;
     margin: 10px 0;
     background-color: white;
-    border: 2px solid #E05297; /* Matching your TropiGlow pink */
-    border-radius: 8px;
+    border: 2px solid #E05297; 
     cursor: pointer;
     font-weight: bold;
 }
