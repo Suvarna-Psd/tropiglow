@@ -295,7 +295,7 @@ body {
 }
 
 #quiz-ui, #results-ui {
-    background: white;
+    background-image: url("../Images/TropiGlow Web BG.jpeg");
     padding: 30px;
     border-radius: 15px;
     max-width: 500px;
