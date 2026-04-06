@@ -1,0 +1,428 @@
+:root {
+    --tropi-pink: #D31C8D;
+    --soft-pink: #f15e94;
+    --glass-white: rgba(255, 255, 255, 0.7);
+    --tropical-green: #2d5a27;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../Images/TropiGlow Web BG.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+    font-family:'Times New Roman', Times, serif;
+    color: #333;
+
+    padding-top: 90px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 2000;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--tropi-pink);
+    font-weight: bold;
+    transition: 0.3s;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.nav-links a:hover {
+    color: var(--soft-pink);
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 22px;
+    color: var(--tropi-pink);
+}
+
+.nav-icons img {
+    height: 24px;
+}
+
+.user-menu {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    min-width: 140px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: var(--tropi-pink);
+    padding: 8px;
+}
+
+.dropdown a:hover {
+    background-color: #fce4ec;
+}
+
+.user-menu:hover .dropdown {
+    display: flex;
+}
+
+.hdrstyle {
+    background-image: url("../Images/Home Page BG.jpeg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 70vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero {
+    padding: 40px;
+    text-align: center;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(6px);
+    border-radius: 20px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--tropi-pink);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+p {
+    color: var(--soft-pink);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 40px;
+}
+
+@media (max-width: 992px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.product-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.product-image img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-info h3 {
+    color: var(--tropi-pink);
+}
+
+.description {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: var(--soft-pink);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.btn-shop {
+    background: var(--tropi-pink);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.btn-shop:hover {
+    background: var(--soft-pink);
+}
+
+.quiz-container {
+    max-width: 500px;
+    margin: 50px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+#progress-bar {
+    height: 6px;
+    background: var(--tropi-pink);
+    width: 0%;
+    border-radius: 10px;
+}
+
+.option-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid var(--soft-pink);
+    background: white;
+    cursor: pointer;
+}
+
+.option-btn:hover {
+    background: var(--soft-pink);
+    color: white;
+}
+
+#results-ui {
+    display: none;
+}
+
+.contact-section {
+    padding: 120px 20px 60px;
+    text-align: center;
+}
+
+.contact-section h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    margin-bottom: 40px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-form {
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.contact-form button {
+    background: #D31C8D;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contact-form button:hover {
+    background: #f15e94;
+}
+
+.contact-info {
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    width: 300px;
+}
+
+.contact-info h3 {
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin: 8px 0;
+}
+
+.note {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #777;
+}
+.cta {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #e0f7f1, #fff);
+  border-radius: 12px;
+  margin: 40px 0;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.cta p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ff82d9;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  margin: 5px;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #9c246a;
+}
+
+.cta-btn.secondary {
+  background-color: transparent;
+  color: #ff82d9;
+  border: 2px solid #ff82d9;
+}
+
+.cta-btn.secondary:hover {
+  background-color: #ff82d9;
+  color: #fff;
+} 
+
+.user-menu img {
+    height: 28px;
+    cursor: pointer;
+    transition: 0.3s;   
+}
+
+.user-menu img:hover {
+    transform: scale(1.1);
+}
+
+.contact-form {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    
+    width: 100%;
+    max-width: 400px;  
+    
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    margin: 0 auto; 
+}
+
+.contact-section {
+    min-height: 100vh;  
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    text-align: center;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
